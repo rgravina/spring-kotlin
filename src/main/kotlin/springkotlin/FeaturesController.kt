@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class HelloWorldController() {
+class FeaturesController {
     @GetMapping
-    fun hello() = "Hello, World!"
+    fun hello() = "Java interoperability, data classes, default parameters, null safety"
 }
