@@ -18,7 +18,8 @@ class FeaturesControllerTests {
 
     @BeforeEach
     fun setup() {
-        val controller = FeaturesController()
+        val repo = FakeFeaturesRepository()
+        val controller = FeaturesController(repo)
         mockMvc = MockMvcBuilders.standaloneSetup(controller).build()
     }
 
@@ -28,4 +29,4 @@ class FeaturesControllerTests {
                 .andExpect(status().isOk)
                 .andExpect(content().string("Java interoperability, data classes, default parameters, null safety"))
     }
-}   
+}

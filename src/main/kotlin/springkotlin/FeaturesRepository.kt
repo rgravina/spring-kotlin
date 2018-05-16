@@ -1,0 +1,4 @@
+package springkotlin
+
+interface FeaturesRepository {
+}
